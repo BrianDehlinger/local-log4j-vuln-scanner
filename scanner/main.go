@@ -143,7 +143,7 @@ func main() {
 				return nil
 			}
 			switch ext := strings.ToLower(filepath.Ext(path)); ext {
-			case ".jar", ".war", ".ear":
+			case ".jar", ".war", ".ear", ".zip":
 				f, err := os.Open(path)
 				if err != nil {
 					fmt.Fprintf(errFile, "can't open %s: %v\n", path, err)
